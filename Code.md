@@ -40,4 +40,23 @@ class Main {
     }
 
 
-Q.2 
+Q.2 Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+
+      Set<Integer> a =new HashSet<>();
+
+      for(int i=0 ; i<nums.length ; i++)
+      {
+          
+          if(a.contains(nums[i]))
+          {
+            return true ;
+          }
+     
+        a.add(nums[i]);
+      }
+   return false ; 
+    }
+}
